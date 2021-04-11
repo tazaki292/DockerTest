@@ -53,7 +53,7 @@ namespace Assets.Scripts
         private void InitializeClient()
         {
             // Initialize the Hub
-            this.channel = new Channel("20.78.105.29", 12345, ChannelCredentials.Insecure);
+            this.channel = new Channel("tazaki-chat-app-server.japaneast.azurecontainer.io", 12345, ChannelCredentials.Insecure);
             this.streamingClient = StreamingHubClient.Connect<IChatHub, IChatHubReceiver>(this.channel, this);
             this.RegisterDisconnectEvent(streamingClient);
             this.client = MagicOnionClient.Create<IChatService>(this.channel);
