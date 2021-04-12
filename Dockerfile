@@ -1,4 +1,5 @@
 FROM microsoft/dotnet:2.1-runtime AS base
+WORKDIR /ChatApp.Server
 WORKDIR /app
 
 FROM microsoft/dotnet:2.1-sdk AS build
